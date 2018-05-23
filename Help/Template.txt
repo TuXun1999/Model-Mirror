@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SJTU-JI Open Source Mirror - Announcement </title>
+<script type="text/javascript" src="announcements.js">
+</script>
+<script type="text/javascript">
+function pick(id){
+ window.location.href=titles[id]+".html";
+}
+</script>
+</head>
+<style type="text/css">
+body{
+ font-family: Times New Roman;
+}
+.button_I{
+ font-size: 30px;
+ border: 0;
+ background-color: grey;
+ color: white;
+ width: 120px;
+ height: 20px;
+ font-family: Times New Roman; 
+ }
+.button_II{
+ font-size: 30px;
+ border: 0;
+ background-color: white;
+ color: black;
+ width: 120px;
+ height: 20px;
+ font-family: Times New Roman ;
+}
+button:hover {
+ cursor: pointer;
+}
+#footwrap{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 120px;
+    padding-right: 120px;
+    background-color:black; 
+   
+    overflow: hidden;
+  }
+</style>
+<body>
+
+<div style="margin-top: 120px;" align="center">
+<img src="interrogation.jpg" style="position: absolute; LEFT:300px;TOP: 20px; HEIGHT: 200px; WIDTH: 240px;"></img>
+<img style="position:absolute; TOP:25px; RIGHT:240px; WIDTH:240px; HEIGHT:200px" src="Logo.jpg"></img>
+<p style="font-size: 50px; font-weight: bold;" align="center">Help</p>
+
+<hr width="85%" align="center"></hr>
+</div>
+
+<div id="container" style="overflow: hidden; margin-left: 150px; margin-right: 150px; padding-top: 50px;">
+<div id="ListOfAnnoucements" width="40%" style="float: right; background-color: grey;">
+<table border=0px width=300px>
+<th align="center">
+<h2>Contents</h2>
+</th>
+<tbody align="center" cellpadding=0px;>
+<script type="text/javascript">
+var i;
+var contents="";
+var TITLE="Test1";
+for(i=0;i<titles.length;i++){
+  if(titles[i]==TITLE) {contents+="<tr height=40px><td bgcolor=white><button class='button_II'  onClick=pick("+i+")>" + titles[i] + "</button></td></tr>";}
+  else {contents+="<tr height=40px><td><button class='button_I' id=titles[i] onClick=pick("+i+")>" + titles[i] + "</button></td></tr>";}
+ }
+document.write(contents);
+</script>
+</tbody>
+</table>
+</div>
+
+
+<div style="float: left; width: 60%;">
+<article>
+<header align="center">
+<h2>Test1</h2><br>
+<time>Published at: 2018/05/19 </time>Author: <br>
+</header>
+<p> This is a test</p>
+<p> This is just a test </p>
+<p>Prologue 
+ 
+
+Free yourself from the terror of the heart that seeks and hopes to find the essence of things.
+ 
+
+Where are we going? Do not ask! Ascend, descend. There is no beginning and no end.
+ 
+
+</p>
+
+</div>
+
+</div>
+<div id="footwrap">
+
+<div style="float: left; color: white;">
+<br>
+The Website is Run and Supported by <em>SSTIA <br></em><br><br>
+<em>SSTIA </em> is a student organization in Joint-Institute, with the goal of providing the platform for<br> students
+who have deep interest in science and technology to study, convey and communicate;<br>
+
+<a href="https://github.com/SSTIA"> Join Us </a>
+</div>
+
+
+<img src="sstia.jpg" style="float: right; WIDTH: 120px; HEIGHT: 120px;" ></img>
+
+</div>
+</body>
+
+</html>
