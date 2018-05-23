@@ -1,1 +1,10 @@
-This folder keeps all the files
+This folder keeps all the released files
+
+Files.js: the reference of all the files;
+Other Files: the open-source files suitable for the users
+
+Q & A:
+Q: I want to upload a new file. What should I do?
+A: There are two main steps:
+1. Move the file under the folder;
+2. Open Files.js, and strictly follow the instructions here. 
