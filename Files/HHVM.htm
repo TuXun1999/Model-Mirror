@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="清华大学开源软件镜像站，致力于为国内和校内用户提供高质量的开源软件镜像、Linux镜像源服务，帮助用户更方便地获取开源软件。本镜像站由清华大学TUNA团队负责维护。">
+<meta name="keywords" content="镜像站,镜像源,Linux,软件源,开源">
+<meta name="author" content="TUNA">
+<link rel="shortcut icon" href="/static/img/favicon.png">
+<title>清华大学开源软件镜像站 | Tsinghua Open Source Mirror</title>
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<link rel="stylesheet" href="/static/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="/static/css/font-awesome.min.css" >
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/spinkit.css">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/bootstrap-select.min.js"></script>
+<script src="/static/js/vue.min.js"></script>
+<script src="/static/js/markup.min.js"></script>
+<script src="/static/js/webfont.js"></script>
+</head>
+
+	<body>
+		<div class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="/static/img/logo-small.png" srcset="/static/img/logo-small.png 1x, /static/img/logo-small@2x.png 2x, /static/img/logo-small@3x.png 3x, /static/img/logo-small@4x.png 4x" alt=""/> 清华大学开源软件镜像站</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li><a href="https://tuna.moe/">HOME</a></li>
+        <li><a href="https://tuna.moe/events/">EVENTS</a></li>
+        <li><a href="https://tuna.moe/blog/">BLOG</a></li>
+        <li><a href="https://tuna.moe/feed.xml">RSS</a></li>
+	<li><a href="https://podcast.tuna.moe/">PODCAST</a></li>
+        <li class="active"><a href="http://mirrors.tuna.tsinghua.edu.cn/">MIRRORS</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+
+		<div id="mirrors">
+			<div class="spacing hidden-xs"></div>
+
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-12 table-responsive" id="mirror-list">
+						<div>
+							<div class="col-md-8 col-xs-12 vbottom"><h3><span class="fa fa-cube"></span>  Index of <span id="path"><script>
+								document.write(location.pathname);
+							</script></span></h3></div><!--
+							--><div class="col-md-4 col-xs-12 text-right-md text-left-xs vbottom" v-if="nowBrowsingMirror">
+								<strong>Last Update:</strong> {{nowBrowsingMirror.last_update}}
+								<span v-if="nowBrowsingMirror.show_status" :class="['label', 'label-status', nowBrowsingMirror.label, 'hidden-xs']">{{nowBrowsingMirror.status}}</span>
+							</div>
+						</div>
+					
+<!--
+	vim: ts=2 sts=2 sw=2 noexpandtab
+-->
+<table id="list"><thead><tr><th style="width:55%"><a href="?C=N&O=A">File Name</a>&nbsp;<a href="?C=N&O=D">&nbsp;&darr;&nbsp;</a></th><th style="width:20%"><a href="?C=S&O=A">File Size</a>&nbsp;<a href="?C=S&O=D">&nbsp;&darr;&nbsp;</a></th><th style="width:25%"><a href="?C=M&O=A">Date</a>&nbsp;<a href="?C=M&O=D">&nbsp;&darr;&nbsp;</a></th></tr></thead>
+<tbody><tr><td><a href="../">Parent directory/</a></td><td>-</td><td>-</td></tr><tr><td><a href="conf/" title="conf">conf/</a></td><td>-</td><td>23 Jan 2018 00:00:16 +0000</td></tr>
+<tr><td><a href="debian/" title="debian">debian/</a></td><td>-</td><td>08 Mar 2017 18:40:49 +0000</td></tr>
+<tr><td><a href="homebrew-bottles/" title="homebrew-bottles">homebrew-bottles/</a></td><td>-</td><td>15 May 2018 21:00:20 +0000</td></tr>
+<tr><td><a href="mint/" title="mint">mint/</a></td><td>-</td><td>31 Jan 2014 01:33:55 +0000</td></tr>
+<tr><td><a href="old/" title="old">old/</a></td><td>-</td><td>23 Jan 2018 00:10:03 +0000</td></tr>
+<tr><td><a href="resources/" title="resources">resources/</a></td><td>-</td><td>23 Jan 2018 00:07:40 +0000</td></tr>
+<tr><td><a href="source/" title="source">source/</a></td><td>-</td><td>15 May 2018 21:00:20 +0000</td></tr>
+<tr><td><a href="ubuntu/" title="ubuntu">ubuntu/</a></td><td>-</td><td>07 May 2015 22:28:28 +0000</td></tr>
+</tbody></table>					
+					</div>
+					
+				</div>
+			</div><!--/container -->
+		</div><!--/mirrors -->
+
+		
+<div id="footerwrap" class="tuna-foot-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <p>本站由清华大学信息化技术中心支持创办，由清华大学 TUNA 协会运行维护。</p>
+        <p>清华大学 TUNA 协会，全名清华大学学生网络与开源软件协会，是由清华大学热爱网络技术和开源软件极客组成的学生技术社团。</p>
+        <p>本站相关源码可在 <a href="https://github.com/tuna/tunasync"><em>这里(镜像管理器)</em></a> 和 <a href="https://github.com/tuna/mirror-web"><em>这里(镜像站网页)</em></a> 获取。</p>
+      </div>
+
+      <div class="col-lg-4 col-md-4">
+        <h4>Contact Us</h4>
+        <div>
+          <ul class="social">
+            <li>
+            <a href="https://groups.google.com/forum/#!forum/tuna-general"><i class="fa fa-envelope"></i> Mailing List</a>
+            </li>
+            <li>
+            IRC: <a href="https://webchat.freenode.net/?channels=%23tuna">#tuna at freenode</a>
+            </li>
+            <li>
+            <a href="https://github.com/tuna/"><i class="fa fa-github"></i> GitHub </a>
+            </li>
+            <li>
+            <a href="http://weibo.com/u/5402274706"><i class="fa fa-weibo"></i> 新浪微博</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4"  align="center">
+        <img class="img-responsive" style="margin-top:5%" src="/static/img/logo-white.png" srcset="/static/img/logo-white.png 1x, /static/img/logo-white@2x.png 2x, /static/img/logo-white@3x.png 3x, /static/img/logo-white@4x.png 4x" />
+      </div>
+    </div><!--/row -->
+  </div><!--/container -->
+</div><!--/footerwrap -->
+
+<div id="footerwrap" class="tuna-foot-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <p>本站由清华大学信息化技术中心支持创办，由清华大学 TUNA 协会运行维护。</p>
+        <p>清华大学 TUNA 协会，全名清华大学学生网络与开源软件协会，是由清华大学热爱网络技术和开源软件极客组成的学生技术社团。</p>
+        <p>本站相关源码可在 <a href="https://github.com/tuna/tunasync"><em>这里(镜像管理器)</em></a> 和 <a href="https://github.com/tuna/mirror-web"><em>这里(镜像站网页)</em></a> 获取。</p>
+      </div>
+
+      <div class="col-lg-4 col-md-4">
+        <h4>Contact Us</h4>
+        <div>
+          <ul class="social">
+            <li>
+            <a href="https://groups.google.com/forum/#!forum/tuna-general"><i class="fa fa-envelope"></i> Mailing List</a>
+            </li>
+            <li>
+            IRC: <a href="https://webchat.freenode.net/?channels=%23tuna">#tuna at freenode</a>
+            </li>
+            <li>
+            <a href="https://github.com/tuna/"><i class="fa fa-github"></i> GitHub </a>
+            </li>
+            <li>
+            <a href="http://weibo.com/u/5402274706"><i class="fa fa-weibo"></i> 新浪微博</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4"  align="center">
+        <img class="img-responsive" style="margin-top:5%" src="/static/img/logo-white.png" srcset="/static/img/logo-white.png 1x, /static/img/logo-white@2x.png 2x, /static/img/logo-white@3x.png 3x, /static/img/logo-white@4x.png 4x" />
+      </div>
+    </div><!--/row -->
+  </div><!--/container -->
+</div><!--/footerwrap -->
+
+
+<script>
+WebFont.load({
+	custom: {
+		families: ['Lato']
+	}
+});
+</script>
+
+
+	</body>
+	
+	
+	<script src="/static/js/index.js"></script>
+	<script src="/static/js/browser-update.js"></script>
+	
+	<script>
+		document.getElementById("list").setAttribute("class", "table");
+		document.title = "Index of " + location.pathname + " | " + document.title;
+		$(function(){
+			$("#list tbody tr td:nth-child(3)").each(function(k,date){
+				var d = new Date($(date).text());
+				if(!isNaN(d.getTime())){
+					var date_str = ('000' + d.getFullYear()).substr(-4) + "-"
+					             + ('0' + (d.getMonth() + 1)).substr(-2) + "-"
+					             + ('0' + d.getDate()).substr(-2)
+					             + (" " + ('0' + d.getHours()).substr(-2) + ":"
+					             + ('0' + d.getMinutes()).substr(-2));
+					$(date).text(date_str);
+				}
+			})
+		});
+	</script>
+	<style>
+		#list tbody td, #path{
+			font-family: monospace;
+		}
+	</style>
+	
+</html>
+<!--
+	vim: ts=2 sts=2 sw=2 noexpandtab
+-->
