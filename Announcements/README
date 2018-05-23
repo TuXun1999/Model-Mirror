@@ -1,1 +1,20 @@
 This folder keeps the "Announcements" pages;
+The Brief Introduction to all the Files:
+1. Template: if you want to add another Annoucement page, you can use the Template file to create it;
+2. announcements.js: this is the file that records all the announcement pages, including their name and time
+3. Other Files in .html suffix: the files that will be loaded
+4. Other Files (like .jpg or .png files): the pictures for decoration
+
+
+Q & A:
+Q: How can I write a new Announcement?
+A: First, you open the Template file. Strictly follow what it asks you to do;
+   Next, you should export the .txt file in a .html file;
+   Then, you should open the announcements.js file (Be sure to open it up in TEXT so that you can edit it). Follow the instructions;
+   Finally, save all the changes, and you will see that the new announcement is released!
+
+
+Changes in Schedule:
+1. A easier way to create the new announcement;
+2. A method to delete the old annoucement;
+3. The button will show up the date of the annoucement in a proper way; 
