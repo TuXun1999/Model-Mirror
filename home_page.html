@@ -1,0 +1,212 @@
+<! DOCTYPE html>
+<html>
+<head>
+  <meta meta http-equiv="content-type" content="text/html; charset=ISO-8850-1" />
+  <meta name="description" content="SJTU-JI open source website">
+  <meta name="keywords" content="Mirror sites, open source">
+  <meta name="author" content="JI-sstia">
+  <title> SJTU-JI Open Source Software Mirror </title>
+  
+  <script type="text/javascript" src="Files/Files.js">
+  </script>
+  <script type="text/javascript" src="Announcements/announcements.js">
+  </script>
+  <script type="text/javascript">
+  function relate(item){
+  item.style="border-bottom: 2px solid #0000ff; color: #0000ff";
+  }
+  function back(item){
+  item.style="border-bottom: 0px solid #000000; color: black";
+  }
+  function listout(keyword){
+  document.getElementById("tbody1").innerHTML=searchFile(keyword);
+  }
+  </script>
+ 
+  <style type="text/css">
+                    /*Header*/
+  #header {
+	font-family: Times New Roman;
+	margin-left: 120px;
+	margin-right: 120px;
+	margin-top: 50px;
+	border: 0;
+        overflow: hidden;
+  }
+  #header button{
+  height: 50px;
+  font-family: Times New Roman;
+  color: black;
+  font-size: 20px;
+  background-color: white; 
+  border-width: 0px; 
+  border-radius: 1px;
+  }
+  #gear{
+  position:absolute; TOP:10px; LEFT:180px; WIDTH:240px; HEIGHT:240px;
+  transform:rotate(7deg);
+-ms-transform:rotate(7deg); 	/* IE 9 */
+-moz-transform:rotate(7deg); 	/* Firefox */
+-webkit-transform:rotate(7deg); /* Safari or Chrome */
+-o-transform:rotate(7deg); 	/* Opera */
+ }
+                       /*Container*/
+  #container{
+       margin-left: 120px;
+       margin-right: 120px;
+       padding-top:20px;
+       margin-bottom: 150px;
+       overflow: hidden;
+  }
+  #files{
+       float: left;
+       border-right: 10px;
+       border-right-color: grey;
+  }
+  #sidebar{
+       float: right;
+       width: 35%;
+  }
+  a:link{
+  text-decoration: none;
+  color: #4876FF;
+  }
+  a:visited{
+  text-decoration: none; 
+  color: #4876FF;
+  }
+  a:hover{
+  color: blue;
+  }
+ .link2ann:link{
+  color: black;
+ }
+ .link2ann:visited{
+ color: black;
+ }
+ .link2ann:hover{
+ color: #4876FF;
+ }
+     /* footer */
+  #footwrap{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 120px;
+    padding-right: 120px;
+    background-color:black; 
+   
+    overflow: hidden;
+  }
+  </style>
+  <script type="text/javascript">
+  var angle=-5;
+  function swirl(){
+  var the_gear=document.getElementById("gear");
+  the_gear.style="position:absolute; TOP:10px; LEFT:180px; WIDTH:240px; HEIGHT:240px;transform:rotate("+angle+"deg)";
+  angle-=5;
+  setTimeout("swirl()",200);
+  }
+  </script>
+</head>
+<body>
+
+<div id="header">
+   <h1 align="center">SJTU-JI Open Source Software Mirror </h1>
+   <p align="center" style="font-style: italic"> Welcome to SJTU-JI open source software mirror.</p>
+   <img id="gear" align="left" src="header/gear.jpg"></img>
+   <img style="position: absolute; TOP:30px; RIGHT: 160px;WIDTH:250px; HEIGHT:200px" align="right" src="header/Logo.jpg"></img>
+   <br><br>
+   <table style="float: right; WIDTH: 40%" align="center" cellspacing="40px" >
+   <tr>
+   <td><button onmousedown="relate(this);" onmouseover="relate(this);" onmouseout="back(this)"; onmouseup="back(this);">Home</button></td>
+   <td><button onmousedown="relate(this);" onmouseover="relate(this);" onmouseout="back(this)"; onmouseup="back(this);">Event</button></td>
+   <td><button onmousedown="relate(this);" onmouseover="relate(this);" onmouseout="back(this)"; onmouseup="back(this);">Announcement</button></td>
+   <td><button onmousedown="relate(this);" onmouseover="relate(this);" onmouseout="back(this)"; onmouseup="back(this);">Help</button></td>
+   </tr>
+   </table>
+   
+   <hr color="black" width="100%">
+   <script type="text/javascript">
+   setTimeout("swirl()",200);
+   </script>
+</div>
+
+
+
+<div id="container">
+
+<div id="files">
+<table><tr>
+<td width="350px">
+<span style="font-size: 20px; font-weight: bold;">Search for Files:</span>
+</td><td>
+<input placeholder="Search for your files" id="search_area" type="search" autocomplete="off" onChange=listout(this.value) style="width: 200px; height: 40px;"></input>
+&nbsp&nbsp&nbsp
+<button style="background-color: #4876FF; border: 0;height: 40px; width: 50px; color: white; font-family: Times New Roman; cursor: pointer "> Go! </button>
+</td>
+</tr></table>
+
+<br><br>
+<div id="file_area">
+<table style="font-size: 20px;">
+<tr>
+<th align="left">File</th><th>Last Update </th><th>Help</th>
+</tr>
+<tbody id="tbody1">
+<script type="text/javascript">
+ var i;
+ var content="";
+ for(i=0;i<Files.length;i++){
+    content+="<tr>" + "<td align='left' width='400px'>" + "<a class='file_name' href=Files/" + Files[i].getName() +" target='blank'>" + 
+              Files[i].getRealName() + "</a></td><td align='center' width='200px'>" + Files[i].getUpdate() + "</td><td align='center' width=100px><a>Help</a></td></tr>";
+ }
+ document.write(content);
+</script>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="sidebar">
+<span style="font-size: 30px;font-weight: bold">Announcements</span>
+<ul>
+<script type="text/javascript">
+var i;
+for(i=0;i<titles.length;i++){
+ document.write("<li><a class='link2ann' target='blank' href=Announcements/"+titles[i]+".html"+">"+titles[i]+"</a></li>");
+}
+</script>
+</ul>
+
+Contanct Us:
+<ul>
+<li>
+<a href="mailto: ramseytaler@sjtu.edu.cn">Email </a>
+<li>
+<a href="https://github.com/SSTIA"> Github </a>
+</ul>
+</div>
+
+</div>
+
+
+
+<div id="footwrap">
+
+<div style="float: left; color: white;">
+<br>
+The Website is Run and Supported by <em>SSTIA <br></em><br><br>
+<em>SSTIA </em> is a student organization in Joint-Institute, with the goal of providing the platform for<br> students
+who have deep interest in science and technology to study, convey and communicate;<br>
+
+<a href="https://github.com/SSTIA"> Join Us </a>
+</div>
+
+
+<img src="sstia.jpg" style="float: right; WIDTH: 120px; HEIGHT: 120px;" ></img>
+
+</div>
+
+</body>
+</html>
+		
